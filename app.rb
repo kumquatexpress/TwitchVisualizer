@@ -69,6 +69,8 @@ def json_cosine_sim(user1, k)
         users += ch.users.sample(k/channels.length)
     end
 
+    users.uniq!
+
     users.each do |u|
         universe += u.channels
     end
