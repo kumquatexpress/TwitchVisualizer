@@ -6,5 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :display_name
       t.timestamps
     end
+
+    execute "ALTER TABLE users ADD PRIMARY KEY (user_id);"
   end
 end

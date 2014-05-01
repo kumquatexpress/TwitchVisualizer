@@ -8,5 +8,7 @@ class CreateChannels < ActiveRecord::Migration
       t.integer :views
       t.timestamps
     end
-  end
+
+    execute "ALTER TABLE channels ADD PRIMARY KEY (channel_id);"
+  end 
 end
